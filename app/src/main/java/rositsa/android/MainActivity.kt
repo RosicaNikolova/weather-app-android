@@ -1,5 +1,6 @@
 package rositsa.android
 
+import android.media.RingtoneManager
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
@@ -26,6 +27,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        //Sound when the app is opened
+        val notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+        val ringtone = RingtoneManager.getRingtone(applicationContext, notification)
+        ringtone.play()
+
 
         sunriseTextView = findViewById(R.id.sunrise)
         sunsetTextView = findViewById(R.id.sunset)
@@ -63,7 +71,6 @@ class MainActivity : AppCompatActivity() {
                 val weather = current.getJSONArray("weather").getJSONObject(0)
                 val condition = weather.getString("description")
                 conditionTextView.text = condition
-
 
 
                 //Date and Time
