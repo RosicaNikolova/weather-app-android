@@ -1,8 +1,3 @@
 <resources>
-    <string name="app_name">AndroidBasics</string>
-    <string name="from_rositsa">From Rositsa</string>
-    <string name="happy_birthday_rositsa">Happy Birthday, Rositsa!</string>
-    <string name="happybirthaycard">happyBirthayCard</string>
-    <string name="roll">Roll</string>
-    <string name="dice">dice</string>
+    <string name="app_name">Weather App</string>
 </resources>
